@@ -70,3 +70,19 @@ bool hasAdjacentDuplicates(const int* a, int size) {
 	cout << "The data has no adjacent duplicates." << endl;
 	return false;
 }
+bool hasDuplicates(const int* a, int size) {
+	const int* p = a;
+	const int* q = &a[1];
+	for (int i = 0; i < size - 1; i++) {
+		p = &a[i];
+		for (int j = i + 1; j < size; j++) {
+			q = &a[j];
+			if (*q == *p) {
+				cout << "The data has duplicates." << endl;
+				return true;
+			}
+		}
+	}
+	cout << "The data has no duplicates." << endl;
+	return false;
+}
