@@ -45,3 +45,16 @@ bool isSortedIncreasing(const int* a, int size) {
 	}
 	cout << "The data are increasing." << endl;
 	return true;
+}
+bool isSortedDecreasing(const int* a, int size) {
+	const int* p = a;
+	for (int i = 0; i < size - 1; i++) {
+		if (*(p + 1) > *p) {
+			cout << "The data are not decreasing." << endl;
+			return false;
+		}
+		p++;
+	}
+	cout << "The data are decreasing." << endl;
+	return true;
+}
