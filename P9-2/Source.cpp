@@ -58,3 +58,15 @@ bool isSortedDecreasing(const int* a, int size) {
 	cout << "The data are decreasing." << endl;
 	return true;
 }
+bool hasAdjacentDuplicates(const int* a, int size) {
+	const int* p = a;
+	for (int i = 0; i < size; i++) {
+		if (*(p + 1) == *p) {
+			cout << "The data has adjacent duplicates." << endl;
+			return true;
+		}
+		p++;
+	}
+	cout << "The data has no adjacent duplicates." << endl;
+	return false;
+}
